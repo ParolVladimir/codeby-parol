@@ -1,2 +1,0 @@
-Content of branch_a_file1
-Content A
