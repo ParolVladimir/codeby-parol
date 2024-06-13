@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 Content B
 =======
 Content C
 >>>>>>> 30203f1bf8445d85df9654fbcb7b6729c4c9730f
+=======
+Content A
+>>>>>>> branch_a
