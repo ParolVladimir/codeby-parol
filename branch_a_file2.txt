@@ -1,0 +1,1 @@
+Content of branch_a_file2
