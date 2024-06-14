@@ -1,0 +1,25 @@
+Script started on 2024-06-14 11:47:29+03:00 [TERM="xterm-256color" TTY="/dev/pts/1" COLUMNS="172" LINES="41"]
+]0;parolvp@parol14: ~[01;32mparolvp@parol14[00m:[01;34m~[00m$    sudo systemctl status custom-nginx.service
+  [sudo] password for parolvp: 
+Sorry, try again.
+[sudo] password for parolvp: 
+[?1h=[0;1;32m●[0m custom-nginx.service - The NGINX HTTP and reverse proxy server[m
+     Loaded: loaded (/etc/systemd/system/custom-nginx.service; enabled; vendor preset: enabled)[m
+     Active: [0;1;32mactive (running)[0m since Fri 2024-06-14 11:47:15 MSK; 25s ago[m
+    Process: 50582 ExecStartPre=/usr/sbin/nginx -t (code=exited, status=0/SUCCESS)[m
+   Main PID: 50584 (nginx)[m
+      Tasks: 3 (limit: 4556)[m
+     Memory: 3.0M[m
+     CGroup: /system.slice/custom-nginx.service[m
+             ├─50584 nginx: master process /usr/sbin/nginx[m
+             ├─50585 nginx: worker process[m
+             └─50586 nginx: worker process[m
+[m
+Jun 14 11:47:15 parol14 systemd[1]: Starting The NGINX HTTP and reverse proxy server...[m
+Jun 14 11:47:15 parol14 nginx[50582]: nginx: the configuration file /etc/nginx/nginx.conf syntax is ok[m
+Jun 14 11:47:15 parol14 nginx[50582]: nginx: configuration file /etc/nginx/nginx.conf test is successful[m
+Jun 14 11:47:15 parol14 systemd[1]: Started The NGINX HTTP and reverse proxy server.[m
+[K[?1l>]0;parolvp@parol14: ~[01;32mparolvp@parol14[00m:[01;34m~[00m$ exit
+exit
+
+Script done on 2024-06-14 11:47:43+03:00 [COMMAND_EXIT_CODE="0"]
