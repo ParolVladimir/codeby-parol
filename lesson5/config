@@ -1,0 +1,5 @@
+ Host server
+    HostName 192.168.221.130
+    User parolsrv
+    Port 22
+     
