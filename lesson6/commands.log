@@ -1,0 +1,195 @@
+Script started on 2024-06-18 11:23:07+03:00 [TERM="xterm-256color" TTY="/dev/pts/2" COLUMNS="110" LINES="30"]
+]0;parolvp@parol14: ~/codeby-parol/lesson6[01;32mparolvp@parol14[00m:[01;34m~/codeby-parol/lesson6[00m$ sud [K[K[K[Klxd init
+Would you like to use LXD clustering? (yes/no) [default=no]: 
+Do you want to configure a new storage pool? (yes/no) [default=yes]: 
+Name of the new storage pool [default=default]: 
+The requested storage pool "default" already exists. Please choose another name.
+Name of the new storage pool [default=default]: parol14
+Name of the storage backend to use (btrfs, dir, lvm, zfs, ceph) [default=zfs]: 
+Create a new ZFS pool? (yes/no) [default=yes]: 
+Would you like to use an existing empty block device (e.g. a disk or partition)? (yes/no) [default=no]: 
+Size in GB of the new loop device (1GB minimum) [default=5GB]: 
+Would you like to connect to a MAAS server? (yes/no) [default=no]: 
+Would you like to create a new local network bridge? (yes/no) [default=yes]: 
+What should the new bridge be called? [default=lxdbr0]: 
+The requested network bridge "lxdbr0" already exists. Please choose another name.
+What should the new bridge be called? [default=lxdbr0]: lxdbr1
+What IPv4 address should be used? (CIDR subnet notation, “auto” or “none”) [default=auto]: 
+What IPv6 address should be used? (CIDR subnet notation, “auto” or “none”) [default=auto]: 
+Would you like the LXD server to be available over the network? (yes/no) [default=no]: 
+Would you like stale cached images to be updated automatically? (yes/no) [default=yes] 
+Would you like a YAML "lxd init" preseed to be printed? (yes/no) [default=no]: 
+]0;parolvp@parol14: ~/codeby-parol/lesson6[01;32mparolvp@parol14[00m:[01;34m~/codeby-parol/lesson6[00m$    lxc launch ubuntu:20.04 my-container
+  Creating my-container
+Retrieving image: Unpack: 100% (930.65MB/s)                                            Retrieving image: Unpack: 100% (930.65MB/s)                                            Starting my-container
+Remapping container filesystem                                                                                             ]0;parolvp@parol14: ~/codeby-parol/lesson6[01;32mparolvp@parol14[00m:[01;34m~/codeby-parol/lesson6[00m$    [K[K[K   lxc exec my-container -- /bin/bash
+      ]0;root@my-container: ~root@my-container:~#    apt update
+[33m0% [Working][0m            Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease
+[33m0% [Waiting for headers][0m[33m0% [Waiting for headers] [Waiting for headers][0m                                              Get:2 http://security.ubuntu.com/ubuntu focal-security InRelease [128 kB]
+[33m                                              0% [Waiting for headers][0m                        Get:3 http://archive.ubuntu.com/ubuntu focal-updates InRelease [128 kB]
+[33m0% [3 InRelease 64.9 kB/128 kB 51%][0m[33m                                   0% [Waiting for headers][0m[33m0% [Waiting for headers][0m                        Get:4 http://archive.ubuntu.com/ubuntu focal-backports InRelease [128 kB]
+[33m0% [4 InRelease 2365 B/128 kB 2%] [Waiting for headers][0m[33m                                                       0% [Waiting for headers][0m                        Get:5 http://security.ubuntu.com/ubuntu focal-security/main amd64 Packages [2984 kB]
+[33m0% [Waiting for headers] [5 Packages 0 B/2984 kB 0%][0m                                                    Get:6 http://archive.ubuntu.com/ubuntu focal/universe amd64 Packages [8628 kB]
+[33m0% [6 Packages 0 B/8628 kB 0%] [5 Packages 147 kB/2984 kB 5%][0m[33m0% [6 Packages 128 kB/8628 kB 1%] [5 Packages 258 kB/2984 kB 9%][0m[33m                                                                0% [6 Packages 2430 kB/8628 kB 28%][0m[33m0% [5 Packages store 0 B] [6 Packages 2477 kB/8628 kB 29%] [Waiting for headers][0m[33m40% [5 Packages store 0 B] [6 Packages 4724 kB/8628 kB 55%] [Waiting for headers][0m                                                                                 Get:7 http://security.ubuntu.com/ubuntu focal-security/main Translation-en [447 kB]
+[33m43% [5 Packages store 0 B] [6 Packages 5787 kB/8628 kB 67%] [7 Translation-en 65.5 kB/447 kB 15%][0m[33m                                                                                                 45% [5 Packages store 0 B] [6 Packages 6032 kB/8628 kB 70%][0m                                                           Get:8 http://security.ubuntu.com/ubuntu focal-security/universe amd64 Packages [966 kB]
+[33m49% [5 Packages store 0 B] [6 Packages 7098 kB/8628 kB 82%] [8 Packages 65.5 kB/966 kB 7%][0m[33m                                                                                          52% [5 Packages store 0 B] [6 Packages 7098 kB/8628 kB 82%] [Waiting for headers][0m                                                                                 Get:9 http://security.ubuntu.com/ubuntu focal-security/universe Translation-en [204 kB]
+[33m53% [5 Packages store 0 B] [6 Packages 7098 kB/8628 kB 82%] [9 Translation-en 192 kB/204 kB 94%][0m[33m                                                                                                53% [5 Packages store 0 B] [6 Packages 7098 kB/8628 kB 82%] [Waiting for headers][0m                                                                                 Get:10 http://security.ubuntu.com/ubuntu focal-security/universe amd64 c-n-f Metadata [19.2 kB]
+[33m53% [5 Packages store 0 B] [6 Packages 7098 kB/8628 kB 82%] [10 Commands-amd64 19.2 kB/19.2 kB 100%][0m                                                                                                    Get:11 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 Packages [24.0 kB]
+[33m                                                                                                    53% [5 Packages store 0 B] [6 Packages 7098 kB/8628 kB 82%] [Waiting for headers][0m                                                                                 Get:12 http://security.ubuntu.com/ubuntu focal-security/multiverse Translation-en [5904 B]
+                                                                                 Get:13 http://security.ubuntu.com/ubuntu focal-security/multiverse amd64 c-n-f Metadata [548 B]
+[33m                                                                                 53% [5 Packages store 0 B] [6 Packages 7098 kB/8628 kB 82%][0m                                                           Get:14 http://archive.ubuntu.com/ubuntu focal/universe Translation-en [5124 kB]
+[33m59% [5 Packages store 0 B] [14 Translation-en 262 kB/5124 kB 5%][0m[33m74% [5 Packages store 0 B] [14 Translation-en 4730 kB/5124 kB 92%][0m[33m                                                                  75% [5 Packages store 0 B] [Waiting for headers][0m                                                Get:15 http://archive.ubuntu.com/ubuntu focal/universe amd64 c-n-f Metadata [265 kB]
+[33m75% [5 Packages store 0 B] [15 Commands-amd64 131 kB/265 kB 49%][0m[33m                                                                76% [5 Packages store 0 B][0m                          Get:16 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 Packages [144 kB]
+[33m76% [5 Packages store 0 B] [16 Packages 0 B/144 kB 0%][0m[33m                                                      76% [5 Packages store 0 B][0m                          Get:17 http://archive.ubuntu.com/ubuntu focal/multiverse Translation-en [104 kB]
+[33m77% [5 Packages store 0 B] [17 Translation-en 104 kB/104 kB 100%][0m                                                                 Get:18 http://archive.ubuntu.com/ubuntu focal/multiverse amd64 c-n-f Metadata [9136 B]
+                                                                 Get:19 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [3359 kB]
+[33m                                                                 77% [5 Packages store 0 B] [19 Packages 131 kB/3359 kB 4%][0m                                                          Get:20 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [1194 kB]
+                                                          Get:21 http://archive.ubuntu.com/ubuntu focal-updates/universe Translation-en [287 kB]
+                                                          Get:22 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 c-n-f Metadata [25.7 kB]
+                                                          Get:23 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [26.2 kB]
+                                                          Get:24 http://archive.ubuntu.com/ubuntu focal-updates/multiverse Translation-en [7880 B]
+                                                          Get:25 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 c-n-f Metadata [620 B]
+                                                          Get:26 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 Packages [45.7 kB]
+[33m                                                          93% [5 Packages store 0 B] [Waiting for headers][0m                                                Get:27 http://archive.ubuntu.com/ubuntu focal-backports/main Translation-en [16.3 kB]
+                                                Get:28 http://archive.ubuntu.com/ubuntu focal-backports/main amd64 c-n-f Metadata [1420 B]
+[33m                                                93% [5 Packages store 0 B][0m                          Get:29 http://archive.ubuntu.com/ubuntu focal-backports/restricted amd64 c-n-f Metadata [116 B]
+                          Get:30 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 Packages [25.0 kB]
+[33m93% [5 Packages store 0 B] [Waiting for headers][0m                                                Get:31 http://archive.ubuntu.com/ubuntu focal-backports/universe Translation-en [16.3 kB]
+                                                Get:32 http://archive.ubuntu.com/ubuntu focal-backports/universe amd64 c-n-f Metadata [880 B]
+                                                Get:33 http://archive.ubuntu.com/ubuntu focal-backports/multiverse amd64 c-n-f Metadata [116 B]
+[33m                                                93% [5 Packages store 0 B][0m[33m                          93% [Working][0m[33m93% [7 Translation-en store 0 B][0m[33m                                94% [Working][0m[33m94% [8 Packages store 0 B][0m[33m                          94% [Working][0m[33m94% [9 Translation-en store 0 B][0m[33m                                94% [Working][0m[33m94% [10 Commands-amd64 store 0 B][0m[33m                                 94% [Working][0m[33m94% [11 Packages store 0 B][0m[33m                           95% [Working][0m[33m95% [12 Translation-en store 0 B][0m[33m                                 95% [Working][0m[33m95% [13 Commands-amd64 store 0 B][0m[33m                                 95% [Working][0m[33m95% [6 Packages store 0 B][0m[33m95% [6 Packages store 0 B][0m[33m95% [6 Packages store 0 B][0m[33m95% [6 Packages store 0 B]                                                                       3912 kB/s 0s[0m[33m95% [6 Packages store 0 B]                                                                       3912 kB/s 0s[0m[33m95% [Working]                                                                                    3912 kB/s 0s[0m[33m95% [14 Translation-en store 0 B]                                                                3912 kB/s 0s[0m[33m95% [14 Translation-en store 0 B]                                                                3912 kB/s 0s[0m[33m95% [14 Translation-en store 0 B]                                                                3912 kB/s 0s[0m[33m95% [Working]                                                                                    3912 kB/s 0s[0m[33m95% [15 Commands-amd64 store 0 B]                                                                3912 kB/s 0s[0m[33m96% [Working]                                                                                    3912 kB/s 0s[0m[33m96% [16 Packages store 0 B]                                                                      3912 kB/s 0s[0m[33m96% [Working]                                                                                    3912 kB/s 0s[0m[33m96% [17 Translation-en store 0 B]                                                                3912 kB/s 0s[0m[33m96% [Working]                                                                                    3912 kB/s 0s[0m[33m96% [18 Commands-amd64 store 0 B]                                                                3912 kB/s 0s[0m[33m96% [Working]                                                                                    3912 kB/s 0s[0m[33m96% [19 Packages store 0 B]                                                                      3912 kB/s 0s[0m[33m96% [19 Packages store 0 B]                                                                      3912 kB/s 0s[0m[33m96% [19 Packages store 0 B]                                                                      3912 kB/s 0s[0m[33m97% [Working]                                                                                    3912 kB/s 0s[0m[33m97% [20 Packages store 0 B]                                                                      3912 kB/s 0s[0m[33m97% [Working]                                                                                    3912 kB/s 0s[0m[33m97% [21 Translation-en store 0 B]                                                                3912 kB/s 0s[0m[33m97% [Working]                                                                                    3912 kB/s 0s[0m[33m97% [22 Commands-amd64 store 0 B]                                                                3912 kB/s 0s[0m[33m97% [Working]                                                                                    3912 kB/s 0s[0m[33m97% [23 Packages store 0 B]                                                                      3912 kB/s 0s[0m[33m98% [Working]                                                                                    3912 kB/s 0s[0m[33m98% [24 Translation-en store 0 B]                                                                3912 kB/s 0s[0m[33m98% [Working]                                                                                    3912 kB/s 0s[0m[33m98% [25 Commands-amd64 store 0 B]                                                                3912 kB/s 0s[0m[33m98% [Working]                                                                                    3912 kB/s 0s[0m[33m98% [26 Packages store 0 B]                                                                      3912 kB/s 0s[0m[33m98% [Working]                                                                                    3912 kB/s 0s[0m[33m98% [27 Translation-en store 0 B]                                                                3912 kB/s 0s[0m[33m99% [Working]                                                                                    3912 kB/s 0s[0m[33m99% [28 Commands-amd64 store 0 B]                                                                3912 kB/s 0s[0m[33m99% [Working]                                                                                    3912 kB/s 0s[0m[33m99% [29 Commands-amd64 store 0 B]                                                                3912 kB/s 0s[0m[33m99% [Working]                                                                                    3912 kB/s 0s[0m[33m99% [30 Packages store 0 B]                                                                      3912 kB/s 0s[0m[33m99% [Working]                                                                                    3912 kB/s 0s[0m[33m99% [31 Translation-en store 0 B]                                                                3912 kB/s 0s[0m[33m100% [Working]                                                                                   3912 kB/s 0s[0m[33m100% [32 Commands-amd64 store 0 B]                                                               3912 kB/s 0s[0m[33m100% [Working]                                                                                   3912 kB/s 0s[0m[33m100% [33 Commands-amd64 store 0 B]                                                               3912 kB/s 0s[0m[33m100% [Working]                                                                                   3912 kB/s 0s[0m                                                                                                             Fetched 24.3 MB in 10s (2424 kB/s)
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 0%Reading package lists... 2%Reading package lists... 2%Reading package lists... 4%Reading package lists... 4%Reading package lists... 4%Reading package lists... 4%Reading package lists... 4%Reading package lists... 4%Reading package lists... 19%Reading package lists... 27%Reading package lists... 27%Reading package lists... 39%Reading package lists... 39%Reading package lists... 40%Reading package lists... 40%Reading package lists... 40%Reading package lists... 40%Reading package lists... 48%Reading package lists... 48%Reading package lists... 49%Reading package lists... 54%Reading package lists... 54%Reading package lists... 63%Reading package lists... 63%Reading package lists... 66%Reading package lists... 66%Reading package lists... 69%Reading package lists... 69%Reading package lists... 71%Reading package lists... 71%Reading package lists... 71%Reading package lists... 71%Reading package lists... 71%Reading package lists... 71%Reading package lists... 71%Reading package lists... 71%Reading package lists... 71%Reading package lists... 71%Reading package lists... 71%Reading package lists... 71%Reading package lists... 71%Reading package lists... 71%Reading package lists... 79%Reading package lists... 79%Reading package lists... 84%Reading package lists... 84%Reading package lists... 92%Reading package lists... 92%Reading package lists... 94%Reading package lists... 96%Reading package lists... 96%Reading package lists... 98%Reading package lists... 98%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... 99%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+2 packages can be upgraded. Run 'apt list --upgradable' to see them.
+]0;root@my-container: ~root@my-container:~# apt install apache2 -y
+Reading package lists... 0%Reading package lists... 100%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+The following additional packages will be installed:
+  apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3 libaprutil1-ldap
+  libjansson4 liblua5.2-0 ssl-cert
+Suggested packages:
+  apache2-doc apache2-suexec-pristine | apache2-suexec-custom www-browser openssl-blacklist
+The following NEW packages will be installed:
+  apache2 apache2-bin apache2-data apache2-utils libapr1 libaprutil1 libaprutil1-dbd-sqlite3
+  libaprutil1-ldap libjansson4 liblua5.2-0 ssl-cert
+0 upgraded, 11 newly installed, 0 to remove and 2 not upgraded.
+Need to get 1873 kB of archives.
+After this operation, 8118 kB of additional disk space will be used.
+[33m0% [Working][0m            Get:1 http://archive.ubuntu.com/ubuntu focal/main amd64 libapr1 amd64 1.6.5-1ubuntu1 [91.4 kB]
+[33m3% [1 libapr1 65.2 kB/91.4 kB 71%][0m[33m                                  6% [Working][0m            Get:2 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libaprutil1 amd64 1.6.1-4ubuntu2.2 [85.1 kB]
+[33m11% [Waiting for headers][0m                         Get:3 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libaprutil1-dbd-sqlite3 amd64 1.6.1-4ubuntu2.2 [10.5 kB]
+[33m13% [Waiting for headers][0m                         Get:4 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 libaprutil1-ldap amd64 1.6.1-4ubuntu2.2 [8752 B]
+[33m14% [4 libaprutil1-ldap 8752 B/8752 B 100%][0m                                           Get:5 http://archive.ubuntu.com/ubuntu focal/main amd64 libjansson4 amd64 2.12-1build1 [28.9 kB]
+[33m                                           19% [Waiting for headers][0m                         Get:6 http://archive.ubuntu.com/ubuntu focal/main amd64 liblua5.2-0 amd64 5.2.4-1.1build3 [106 kB]
+[33m21% [6 liblua5.2-0 63.9 kB/106 kB 60%][0m[33m                                      25% [Waiting for headers][0m                         Get:7 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 apache2-bin amd64 2.4.41-4ubuntu3.17 [1187 kB]
+[33m27% [7 apache2-bin 34.6 kB/1187 kB 3%][0m[33m                                      78% [Working][0m             Get:8 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 apache2-data all 2.4.41-4ubuntu3.17 [158 kB]
+[33m78% [8 apache2-data 0 B/158 kB 0%][0m[33m                                  86% [Working][0m             Get:9 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 apache2-utils amd64 2.4.41-4ubuntu3.17 [84.1 kB]
+[33m89% [9 apache2-utils 65.5 kB/84.1 kB 78%][0m[33m                                         92% [Waiting for headers][0m                         Get:10 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 apache2 amd64 2.4.41-4ubuntu3.17 [95.5 kB]
+[33m96% [10 apache2 95.5 kB/95.5 kB 100%][0m[33m                                     97% [Waiting for headers][0m                         Get:11 http://archive.ubuntu.com/ubuntu focal/main amd64 ssl-cert all 1.0.39 [17.0 kB]
+[33m                         100% [Working][0m              Fetched 1873 kB in 1s (2345 kB/s)
+Preconfiguring packages ...
+
+7[0;29r8[1ASelecting previously unselected package libapr1:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 32221 files and directories currently installed.)
+Preparing to unpack .../00-libapr1_1.6.5-1ubuntu1_amd64.deb ...
+7[30;0f[42m[30mProgress: [  0%][49m[39m [........................................................................................] 87[30;0f[42m[30mProgress: [  2%][49m[39m [#.......................................................................................] 8Unpacking libapr1:amd64 (1.6.5-1ubuntu1) ...
+7[30;0f[42m[30mProgress: [  4%][49m[39m [###.....................................................................................] 8Selecting previously unselected package libaprutil1:amd64.
+Preparing to unpack .../01-libaprutil1_1.6.1-4ubuntu2.2_amd64.deb ...
+7[30;0f[42m[30mProgress: [  7%][49m[39m [#####...................................................................................] 8Unpacking libaprutil1:amd64 (1.6.1-4ubuntu2.2) ...
+7[30;0f[42m[30mProgress: [  9%][49m[39m [#######.................................................................................] 8Selecting previously unselected package libaprutil1-dbd-sqlite3:amd64.
+Preparing to unpack .../02-libaprutil1-dbd-sqlite3_1.6.1-4ubuntu2.2_amd64.deb ...
+7[30;0f[42m[30mProgress: [ 11%][49m[39m [#########...............................................................................] 8Unpacking libaprutil1-dbd-sqlite3:amd64 (1.6.1-4ubuntu2.2) ...
+7[30;0f[42m[30mProgress: [ 13%][49m[39m [###########.............................................................................] 8Selecting previously unselected package libaprutil1-ldap:amd64.
+Preparing to unpack .../03-libaprutil1-ldap_1.6.1-4ubuntu2.2_amd64.deb ...
+7[30;0f[42m[30mProgress: [ 16%][49m[39m [#############...........................................................................] 8Unpacking libaprutil1-ldap:amd64 (1.6.1-4ubuntu2.2) ...
+7[30;0f[42m[30mProgress: [ 18%][49m[39m [###############.........................................................................] 8Selecting previously unselected package libjansson4:amd64.
+Preparing to unpack .../04-libjansson4_2.12-1build1_amd64.deb ...
+7[30;0f[42m[30mProgress: [ 20%][49m[39m [#################.......................................................................] 8Unpacking libjansson4:amd64 (2.12-1build1) ...
+7[30;0f[42m[30mProgress: [ 22%][49m[39m [###################.....................................................................] 8Selecting previously unselected package liblua5.2-0:amd64.
+Preparing to unpack .../05-liblua5.2-0_5.2.4-1.1build3_amd64.deb ...
+7[30;0f[42m[30mProgress: [ 24%][49m[39m [#####################...................................................................] 8Unpacking liblua5.2-0:amd64 (5.2.4-1.1build3) ...
+7[30;0f[42m[30mProgress: [ 27%][49m[39m [#######################.................................................................] 8Selecting previously unselected package apache2-bin.
+Preparing to unpack .../06-apache2-bin_2.4.41-4ubuntu3.17_amd64.deb ...
+7[30;0f[42m[30mProgress: [ 29%][49m[39m [#########################...............................................................] 8Unpacking apache2-bin (2.4.41-4ubuntu3.17) ...
+7[30;0f[42m[30mProgress: [ 31%][49m[39m [###########################.............................................................] 8Selecting previously unselected package apache2-data.
+Preparing to unpack .../07-apache2-data_2.4.41-4ubuntu3.17_all.deb ...
+7[30;0f[42m[30mProgress: [ 33%][49m[39m [#############################...........................................................] 8Unpacking apache2-data (2.4.41-4ubuntu3.17) ...
+7[30;0f[42m[30mProgress: [ 36%][49m[39m [###############################.........................................................] 8Selecting previously unselected package apache2-utils.
+Preparing to unpack .../08-apache2-utils_2.4.41-4ubuntu3.17_amd64.deb ...
+7[30;0f[42m[30mProgress: [ 38%][49m[39m [#################################.......................................................] 8Unpacking apache2-utils (2.4.41-4ubuntu3.17) ...
+7[30;0f[42m[30mProgress: [ 40%][49m[39m [###################################.....................................................] 8Selecting previously unselected package apache2.
+Preparing to unpack .../09-apache2_2.4.41-4ubuntu3.17_amd64.deb ...
+7[30;0f[42m[30mProgress: [ 42%][49m[39m [#####################################...................................................] 8Unpacking apache2 (2.4.41-4ubuntu3.17) ...
+7[30;0f[42m[30mProgress: [ 44%][49m[39m [#######################################.................................................] 8Selecting previously unselected package ssl-cert.
+Preparing to unpack .../10-ssl-cert_1.0.39_all.deb ...
+7[30;0f[42m[30mProgress: [ 47%][49m[39m [#########################################...............................................] 8Unpacking ssl-cert (1.0.39) ...
+7[30;0f[42m[30mProgress: [ 49%][49m[39m [###########################################.............................................] 8Setting up libapr1:amd64 (1.6.5-1ubuntu1) ...
+7[30;0f[42m[30mProgress: [ 51%][49m[39m [############################################............................................] 87[30;0f[42m[30mProgress: [ 53%][49m[39m [##############################################..........................................] 8Setting up libjansson4:amd64 (2.12-1build1) ...
+7[30;0f[42m[30mProgress: [ 56%][49m[39m [################################################........................................] 87[30;0f[42m[30mProgress: [ 58%][49m[39m [##################################################......................................] 8Setting up ssl-cert (1.0.39) ...
+7[30;0f[42m[30mProgress: [ 60%][49m[39m [####################################################....................................] 87[30;0f[42m[30mProgress: [ 62%][49m[39m [######################################################..................................] 8Setting up liblua5.2-0:amd64 (5.2.4-1.1build3) ...
+7[30;0f[42m[30mProgress: [ 64%][49m[39m [########################################################................................] 87[30;0f[42m[30mProgress: [ 67%][49m[39m [##########################################################..............................] 8Setting up apache2-data (2.4.41-4ubuntu3.17) ...
+7[30;0f[42m[30mProgress: [ 69%][49m[39m [############################################################............................] 87[30;0f[42m[30mProgress: [ 71%][49m[39m [##############################################################..........................] 8Setting up libaprutil1:amd64 (1.6.1-4ubuntu2.2) ...
+7[30;0f[42m[30mProgress: [ 73%][49m[39m [################################################################........................] 87[30;0f[42m[30mProgress: [ 76%][49m[39m [##################################################################......................] 8Setting up libaprutil1-ldap:amd64 (1.6.1-4ubuntu2.2) ...
+7[30;0f[42m[30mProgress: [ 78%][49m[39m [####################################################################....................] 87[30;0f[42m[30mProgress: [ 80%][49m[39m [######################################################################..................] 8Setting up libaprutil1-dbd-sqlite3:amd64 (1.6.1-4ubuntu2.2) ...
+7[30;0f[42m[30mProgress: [ 82%][49m[39m [########################################################################................] 87[30;0f[42m[30mProgress: [ 84%][49m[39m [##########################################################################..............] 8Setting up apache2-utils (2.4.41-4ubuntu3.17) ...
+7[30;0f[42m[30mProgress: [ 87%][49m[39m [############################################################################............] 87[30;0f[42m[30mProgress: [ 89%][49m[39m [##############################################################################..........] 8Setting up apache2-bin (2.4.41-4ubuntu3.17) ...
+7[30;0f[42m[30mProgress: [ 91%][49m[39m [################################################################################........] 87[30;0f[42m[30mProgress: [ 93%][49m[39m [##################################################################################......] 8Setting up apache2 (2.4.41-4ubuntu3.17) ...
+7[30;0f[42m[30mProgress: [ 96%][49m[39m [####################################################################################....] 8Enabling module mpm_event.
+Enabling module authz_core.
+Enabling module authz_host.
+Enabling module authn_core.
+Enabling module auth_basic.
+Enabling module access_compat.
+Enabling module authn_file.
+Enabling module authz_user.
+Enabling module alias.
+Enabling module dir.
+Enabling module autoindex.
+Enabling module env.
+Enabling module mime.
+Enabling module negotiation.
+Enabling module setenvif.
+Enabling module filter.
+Enabling module deflate.
+Enabling module status.
+Enabling module reqtimeout.
+Enabling conf charset.
+Enabling conf localized-error-pages.
+Enabling conf other-vhosts-access-log.
+Enabling conf security.
+Enabling conf serve-cgi-bin.
+Enabling site 000-default.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache2.service → /lib/systemd/system/apache2.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/apache-htcacheclean.service → /lib/systemd/system/apache-htcacheclean.service.
+7[30;0f[42m[30mProgress: [ 98%][49m[39m [######################################################################################..] 8Processing triggers for ufw (0.36-6ubuntu1.1) ...
+Processing triggers for systemd (245.4-4ubuntu3.23) ...
+Processing triggers for man-db (2.9.1-1) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.16) ...
+
+7[0;30r8[1A[J]0;root@my-container: ~root@my-container:~# systec[Kmctl  [Kstart apache 2[K[K2
+]0;root@my-container: ~root@my-container:~# systemctl enable apache 2[K[K2
+Synchronizing state of apache2.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable apache2
+]0;root@my-container: ~root@my-container:~# si[Kysi[Kte,c[K[Kmctl status apache2
+[?1h=[0;1;32m●[0m apache2.service - The Apache HTTP Server[m
+     Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)[m
+     Active: [0;1;32mactive (running)[0m since Tue 2024-06-18 08:24:56 UTC; 25s ago[m
+       Docs: https://httpd.apache.org/docs/2.4/[m
+   Main PID: 1946 (apache2)[m
+      Tasks: 54 (limit: 4555)[m
+     Memory: 6.4M[m
+     CGroup: /system.slice/apache2.service[m
+             ├─1946 /usr/sbin/apache2 -k start[m
+             ├─1948 /usr/sbin/apache2 -k start[m
+             └─1949 /usr/sbin/apache2 -k start[m
+[m
+Jun 18 08:24:56 my-container systemd[1]: Starting The Apache HTTP Server...[m
+Jun 18 08:24:56 my-container systemd[1]: Started The Apache HTTP Server.[m
+[K[?1l>]0;root@my-container: ~root@my-container:~# exit
+exit
+]0;parolvp@parol14: ~/codeby-parol/lesson6[01;32mparolvp@parol14[00m:[01;34m~/codeby-parol/lesson6[00m$ exit
+exit
+
+Script done on 2024-06-18 11:25:32+03:00 [COMMAND_EXIT_CODE="0"]
